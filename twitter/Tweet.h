@@ -24,6 +24,8 @@
 
 +(NSMutableArray *)tweetsWithArray:(NSArray *)dictionaries;
 
+-(instancetype)initWithDictionary: (NSDictionary *)dictionary;
+
 
 
 @end
