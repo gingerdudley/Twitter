@@ -8,6 +8,8 @@
 
 #import "ComposeViewController.h"
 #import "APIManager.h"
+#import "Tweet.h"
+#import "TweetCell.h"
 
 @interface ComposeViewController ()
 
@@ -37,15 +39,17 @@
 - (IBAction)tweetAction:(id)sender {
     [[APIManager shared] postStatusWithText:self.TweetBody.text completion:^(Tweet *tweet, NSError * error) {
         [self dismissViewControllerAnimated:true completion:nil];
+        
+        if(error){
+            NSLog(@"Error composing Tweet: %@", error.localizedDescription);
+        }
+        else{
+            [self.delegate didTweet:tweet];
+            NSLog(@"Compose Tweet Success!");
+        }
     }];
     
-    
 }
-
-
-
-
-
 
 
 /*
