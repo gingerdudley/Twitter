@@ -8,6 +8,7 @@
 
 #import "TweetCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "APIManager.h"
 
 
 @implementation TweetCell
@@ -50,10 +51,18 @@
     //update cell UI
     [self refreshData];
     
-    
-    //send the POST request 
+    //send the POST request
+    [[APIManager shared] favorite:self.tweet completion:^(Tweet *tweet, NSError *error) {
+        if(error){
+            NSLog(@"Error favoriting tweet: %@", error.localizedDescription);
+        }
+        else{
+            NSLog(@"Successfully favorited the following Tweet: %@", tweet.text);
+        }
+    }];
     
 }
+
 
 -(void)refreshData{
     self.retweetCountLabel.text = [NSString stringWithFormat:@"%d", self.tweet.retweetCount];
