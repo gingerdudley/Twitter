@@ -44,31 +44,50 @@
 - (IBAction)didTapFavorite:(id)sender {
     
     //update local tweet model
-    self.tweet.favorited = YES;
-    self.tweet.favoriteCount += 1;
-    
-    
-    //update cell UI
-    [self refreshData];
-    
-    //send the POST request
-    [[APIManager shared] favorite:self.tweet completion:^(Tweet *tweet, NSError *error) {
-        if(error){
-            NSLog(@"Error favoriting tweet: %@", error.localizedDescription);
-        }
-        else{
-            NSLog(@"Successfully favorited the following Tweet: %@", tweet.text);
-        }
-    }];
+    if(self.tweet.favorited){
+        self.tweet.favorited = NO;
+        self.tweet.favoriteCount -= 1;
+        
+        [self refreshData];
+        
+        [[APIManager shared] unfavorite:self.tweet completion:^(Tweet *tweet, NSError *error) {
+            if(error){
+                NSLog(@"Error unfavoriting tweet: %@", error.localizedDescription);
+            }
+            else{
+                NSLog(@"Successfully unfavorited the following Tweet: %@", tweet.text);
+            }
+        }];
+    }
+    else{
+        self.tweet.favorited = YES;
+        self.tweet.favoriteCount += 1;
+        
+        [self refreshData];
+        
+        [[APIManager shared] favorite:self.tweet completion:^(Tweet *tweet, NSError *error) {
+            if(error){
+                NSLog(@"Error favoriting tweet: %@", error.localizedDescription);
+            }
+            else{
+                NSLog(@"Successfully favorited the following Tweet: %@", tweet.text);
+            }
+        }];
+    }
     
 }
+
 
 
 -(void)refreshData{
     self.retweetCountLabel.text = [NSString stringWithFormat:@"%d", self.tweet.retweetCount];
     self.favoriteCountLabel.text = [NSString stringWithFormat:@"%d", self.tweet.favoriteCount];
-    if(self.tweet.favorited != NO){
+    if(self.tweet.favorited){
         UIImage *favoriteButtonImage = [UIImage imageNamed:@"favor-icon-red"];
+        [self.favoriteButton setImage:favoriteButtonImage forState:UIControlStateNormal];
+    }
+    else{
+        UIImage *favoriteButtonImage = [UIImage imageNamed:@"favor-icon"];
         [self.favoriteButton setImage:favoriteButtonImage forState:UIControlStateNormal];
     }
     
