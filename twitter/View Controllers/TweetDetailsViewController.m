@@ -18,6 +18,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tweetBodyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *retweetNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *favoriteNumberLabel;
+@property (weak, nonatomic) IBOutlet UIButton *replyButton;
+@property (weak, nonatomic) IBOutlet UIButton *retweetButton;
+@property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
 @end
 
@@ -44,7 +49,19 @@
     self.dateLabel.text = self.tweet.createdAtString;
     [self.dateLabel sizeToFit];
     
+    self.retweetNumberLabel.text = [[NSString stringWithFormat:@"%d", self.tweet.retweetCount] stringByAppendingString:@" retweets"];
+    //[self.retweetNumberLabel sizeToFit];
+    self.favoriteNumberLabel.text = [[NSString stringWithFormat:@"%d", self.tweet.favoriteCount] stringByAppendingString:@" favorites"];
+    
 }
+
+- (IBAction)didTapReply:(id)sender {
+}
+- (IBAction)didTapRetweet:(id)sender {
+}
+- (IBAction)didTapFavorite:(id)sender {
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
