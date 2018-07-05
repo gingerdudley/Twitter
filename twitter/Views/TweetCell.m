@@ -32,6 +32,10 @@
     self.authorLabel.text = tweet.user.name;
     [self.authorLabel sizeToFit];
     
+    //add in string with format to get the screen name to have an at
+    self.screenNameLabel.text = tweet.user.screenName;
+    //[self.screenNameLabel sizeToFit];
+    
     self.profileImage.image = nil;
     if(tweet.user.profilePicture != nil){
         [self.profileImage setImageWithURL:tweet.user.profilePicture];
