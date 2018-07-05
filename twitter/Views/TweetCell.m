@@ -43,6 +43,8 @@
     }
     self.retweetCountLabel.text = [NSString stringWithFormat:@"%d", tweet.retweetCount];
     self.favoriteCountLabel.text = [NSString stringWithFormat:@"%d", tweet.favoriteCount];
+    self.dateStampLabel.text = tweet.createdAtString;
+    [self.dateStampLabel sizeToFit];
     
     
 }
