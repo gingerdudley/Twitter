@@ -33,8 +33,9 @@
     [self.authorLabel sizeToFit];
     
     //add in string with format to get the screen name to have an at
-    self.screenNameLabel.text = tweet.user.screenName;
-    //[self.screenNameLabel sizeToFit];
+    NSString *atSign = @"@";
+    self.screenNameLabel.text = [atSign stringByAppendingString:tweet.user.screenName];
+    
     
     self.profileImage.image = nil;
     if(tweet.user.profilePicture != nil){
