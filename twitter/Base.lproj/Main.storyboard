@@ -93,9 +93,9 @@
                                                         <constraint firstAttribute="width" constant="50" id="h1R-5H-DTR"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ginger Dudley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qh-k2-dhu">
-                                                    <rect key="frame" x="65" y="9" width="98" height="17"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIr-WM-YiC">
+                                                    <rect key="frame" x="65" y="36" width="251" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -141,7 +141,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ginger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vT4-lM-TXV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="@ginger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vT4-lM-TXV">
                                                     <rect key="frame" x="170.5" y="11" width="54" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
@@ -153,9 +153,9 @@
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIr-WM-YiC">
-                                                    <rect key="frame" x="65" y="36" width="251" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ginger Dudley" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qh-k2-dhu">
+                                                    <rect key="frame" x="65" y="11" width="98" height="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -168,12 +168,12 @@
                                                 <constraint firstItem="uxR-Tx-t1E" firstAttribute="top" secondItem="y90-BD-Dav" secondAttribute="top" id="IeM-Fy-1Ow"/>
                                                 <constraint firstItem="XJs-7k-f5A" firstAttribute="leading" secondItem="y90-BD-Dav" secondAttribute="trailing" constant="8" id="LEx-ip-Beo"/>
                                                 <constraint firstItem="vT4-lM-TXV" firstAttribute="leading" secondItem="8Qh-k2-dhu" secondAttribute="trailing" constant="7.5" id="NSR-g3-cv7"/>
-                                                <constraint firstItem="8Qh-k2-dhu" firstAttribute="top" secondItem="rsL-z2-g90" secondAttribute="top" constant="9" id="P5n-hw-MrI"/>
+                                                <constraint firstItem="8Qh-k2-dhu" firstAttribute="top" secondItem="rsL-z2-g90" secondAttribute="top" constant="11" id="P5n-hw-MrI"/>
                                                 <constraint firstItem="8Qh-k2-dhu" firstAttribute="leading" secondItem="T5a-Yz-QJB" secondAttribute="trailing" constant="8" id="PjO-wE-cOZ"/>
                                                 <constraint firstItem="vT4-lM-TXV" firstAttribute="leading" secondItem="8Qh-k2-dhu" secondAttribute="trailing" constant="7.5" id="YLq-gY-KLi"/>
                                                 <constraint firstItem="XJs-7k-f5A" firstAttribute="top" secondItem="y90-BD-Dav" secondAttribute="top" constant="4.5" id="YnO-Je-Ied"/>
                                                 <constraint firstItem="Qfe-mX-mnV" firstAttribute="top" secondItem="y90-BD-Dav" secondAttribute="top" constant="8.5" id="b3C-lx-lot"/>
-                                                <constraint firstItem="rIr-WM-YiC" firstAttribute="top" secondItem="8Qh-k2-dhu" secondAttribute="bottom" constant="10" id="b5O-Wm-rMA"/>
+                                                <constraint firstItem="rIr-WM-YiC" firstAttribute="top" secondItem="8Qh-k2-dhu" secondAttribute="bottom" constant="8" id="b5O-Wm-rMA"/>
                                                 <constraint firstItem="uxR-Tx-t1E" firstAttribute="top" secondItem="rIr-WM-YiC" secondAttribute="bottom" constant="48.5" id="bWk-0v-rf1"/>
                                                 <constraint firstAttribute="trailing" secondItem="rIr-WM-YiC" secondAttribute="trailing" constant="59" id="dKd-Ke-eAv"/>
                                                 <constraint firstItem="Vb4-YT-Qk7" firstAttribute="baseline" secondItem="vT4-lM-TXV" secondAttribute="baseline" id="f8f-Pc-scD"/>
