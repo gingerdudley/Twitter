@@ -7,6 +7,7 @@
 //
 
 #import "Tweet.h"
+#import "NSDate+TimeAgo.h"
 
 @implementation Tweet
 
@@ -44,12 +45,16 @@
         //changing the string to a date
         NSDate *date = [formatter dateFromString:createdAtOriginalString];
         
+        //changing the timestamp to display .... ago
+        NSString *ago = [date timeAgo];
+        self.createdAtString = ago;
+        
         //output format
-        formatter.dateStyle = NSDateFormatterShortStyle;
-        formatter.timeStyle = NSDateIntervalFormatterNoStyle;
+        //formatter.dateStyle = NSDateFormatterShortStyle;
+        //formatter.timeStyle = NSDateIntervalFormatterNoStyle;
         
         //changing date to a string
-        self.createdAtString = [formatter stringFromDate:date];
+        //self.createdAtString = [formatter stringFromDate:date];
         
         
     }
