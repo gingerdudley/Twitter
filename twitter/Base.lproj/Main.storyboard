@@ -198,6 +198,7 @@
                                             <outlet property="retweetCountLabel" destination="XJs-7k-f5A" id="rsv-Pz-Ifd"/>
                                             <outlet property="screenNameLabel" destination="vT4-lM-TXV" id="ntL-3i-lub"/>
                                             <outlet property="tweetTextBody" destination="rIr-WM-YiC" id="3bo-3w-4KM"/>
+                                            <segue destination="U8T-W3-LGT" kind="show" id="WwE-UL-7p2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -227,12 +228,28 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="composeTweetButton" destination="BaL-U7-S30" id="QQz-2b-4zy"/>
                         <outlet property="tableView" destination="ZMC-b5-hei" id="4F1-er-S3Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQh-hN-GQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2016.8" y="35.532233883058474"/>
+        </scene>
+        <!--Tweet Details View Controller-->
+        <scene sceneID="yny-hl-r7O">
+            <objects>
+                <viewController id="U8T-W3-LGT" customClass="TweetDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0zY-vZ-uSQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="a4R-cI-9WS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gF-Rr-vCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="792"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="KRI-Oh-NcM">
