@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ComposeViewController.h"
+#import "AppDelegate.h"
+#import "LoginViewController.h"
 
 //@interface TimelineViewController : UIViewController
 @interface TimelineViewController:UIViewController <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
