@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tweetBodyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end
 
@@ -33,11 +34,15 @@
     }
     self.nameLabel.text = self.tweet.user.name;
     [self.nameLabel sizeToFit];
-    self.usernameLabel.text = self.tweet.user.screenName;
+    NSString *atSign = @"@";
+    self.usernameLabel.text = [atSign stringByAppendingString:self.tweet.user.screenName];
     [self.usernameLabel sizeToFit];
     
     self.tweetBodyLabel.text = self.tweet.text;
     [self.tweetBodyLabel sizeToFit];
+    
+    self.dateLabel.text = self.tweet.createdAtString;
+    [self.dateLabel sizeToFit];
     
 }
 
