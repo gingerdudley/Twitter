@@ -15,7 +15,7 @@
 @property (strong, nonatomic) NSURL *profilePicture;
 
 //adding banner pic
-//@property
+@property (strong, nonatomic) NSURL *bannerPicture;
 //profile pic
 
 -(instancetype)initWithDictionary: (NSDictionary *)dictionary;

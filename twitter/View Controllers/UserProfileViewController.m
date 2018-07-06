@@ -23,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.profileImage setImageWithURL:self.user.profilePicture];
+    [self.backdropImage setImageWithURL:self.user.bannerPicture];
     //self.backdropImage setImageWithURL:self.user.
     
     

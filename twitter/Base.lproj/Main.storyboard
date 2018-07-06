@@ -543,11 +543,11 @@
                                 <color key="backgroundColor" red="1" green="0.48899463329999998" blue="0.96381602239999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SKs-52-A2S">
-                                <rect key="frame" x="8" y="203" width="112" height="103"/>
+                                <rect key="frame" x="9" y="218" width="90" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-eE-0OH">
-                                        <rect key="frame" x="8" y="5" width="96" height="90"/>
+                                        <rect key="frame" x="8" y="5" width="75" height="71"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.19512057304382324" green="0.74881726503372192" blue="0.92386752367019653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
