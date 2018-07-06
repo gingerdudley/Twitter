@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
+#import "Entities.h"
 
 @interface Tweet : NSObject
 
@@ -21,6 +22,9 @@
 @property (strong, nonatomic) NSString *createdAtString;
 
 @property (strong, nonatomic) User *retweetedByUser;
+
+//added for entity aspect
+//@property (strong, nonatomic) Entities *entities;
 
 +(NSMutableArray *)tweetsWithArray:(NSArray *)dictionaries;
 

@@ -56,21 +56,18 @@
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
-    // TODO: Check the proposed new text character count
-    // Allow or disallow the new text
-    // Set the max character limit
     int characterLimit = 140;
-    
+
     // Construct what the new text would be if we allowed the user's latest edit
     NSString *newText = [self.TweetBody.text stringByReplacingCharactersInRange:range withString:text];
-    
+
     // TODO: Update Character Count Label
     //int characterCount = characterLimit - newText.length;
-    //self.characterCountLabel.text = [NSString stringWithFormat:@"/d", characterLimit-[newText.length]];
-    
+    self.characterCountLabel.text = [NSString stringWithFormat:@"%d", 140 - self.TweetBody.text.length];
+
     // The new text should be allowed? True/False
     return newText.length < characterLimit;
-    
+
 }
 
 

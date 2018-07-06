@@ -56,6 +56,11 @@
         //changing date to a string
         //self.createdAtString = [formatter stringFromDate:date];
         
+        //adding an entity object
+       // NSDictionary *entities = dictionary[@"entities"];
+        //self.entities = [[Entities alloc] initWithDictionary:entities];
+        
+        
         
     }
     return self;

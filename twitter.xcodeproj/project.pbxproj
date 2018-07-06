@@ -14,6 +14,7 @@
 		4C64F48220EEBADC00D18754 /* TweetDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C64F48120EEBADC00D18754 /* TweetDetailsViewController.m */; };
 		4C64F48520EEDD8000D18754 /* ProfilePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C64F48420EEDD8000D18754 /* ProfilePageViewController.m */; };
 		4C64F48820EEF06100D18754 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C64F48720EEF06100D18754 /* UserProfileViewController.m */; };
+		4C64F48B20F019F200D18754 /* Entities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C64F48A20F019F200D18754 /* Entities.m */; };
 		557D7B17F5D2B5715B705AA9 /* libPods-twitter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D6142D6F34C1AE98EE4951 /* libPods-twitter.a */; };
 		6AD278DA20BC4B950085BC29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD278D920BC4B950085BC29 /* AppDelegate.m */; };
 		6AD278E020BC4B950085BC29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD278DE20BC4B950085BC29 /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 		4C64F48420EEDD8000D18754 /* ProfilePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfilePageViewController.m; sourceTree = "<group>"; };
 		4C64F48620EEF06100D18754 /* UserProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
 		4C64F48720EEF06100D18754 /* UserProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
+		4C64F48920F019F200D18754 /* Entities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entities.h; sourceTree = "<group>"; };
+		4C64F48A20F019F200D18754 /* Entities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Entities.m; sourceTree = "<group>"; };
 		6AD278D520BC4B950085BC29 /* twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD278D820BC4B950085BC29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6AD278D920BC4B950085BC29 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				4C06B65F20EAD5D4000C4FD1 /* Tweet.m */,
 				4C06B65B20EAD400000C4FD1 /* User.h */,
 				4C06B65C20EAD400000C4FD1 /* User.m */,
+				4C64F48920F019F200D18754 /* Entities.h */,
+				4C64F48A20F019F200D18754 /* Entities.m */,
 				6AD278E120BC4B970085BC29 /* Assets.xcassets */,
 				6AD278E320BC4B970085BC29 /* LaunchScreen.storyboard */,
 				6AD278E620BC4B970085BC29 /* Info.plist */,
@@ -302,6 +307,7 @@
 				6AD278DA20BC4B950085BC29 /* AppDelegate.m in Sources */,
 				4C64F48820EEF06100D18754 /* UserProfileViewController.m in Sources */,
 				6AD278F620BCB68B0085BC29 /* APIManager.m in Sources */,
+				4C64F48B20F019F200D18754 /* Entities.m in Sources */,
 				6AD2790920BCC04D0085BC29 /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +449,7 @@
 			baseConfigurationReference = 75895B6507775E8AFBEEA2D9 /* Pods-twitter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQJ55SDWUK;
 				INFOPLIST_FILE = twitter/Info.plist;
@@ -450,8 +457,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.twitter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.twitterginger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -461,6 +469,7 @@
 			baseConfigurationReference = 1397EA94AE1DE5F26C1724FD /* Pods-twitter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQJ55SDWUK;
 				INFOPLIST_FILE = twitter/Info.plist;
@@ -468,8 +477,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.twitter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.twitterginger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
