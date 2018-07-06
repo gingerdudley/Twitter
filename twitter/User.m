@@ -18,6 +18,9 @@
         self.screenName = dictionary[@"screen_name"];
         self.profilePicture = [NSURL URLWithString:dictionary[@"profile_image_url_https"]] ;
         self.bannerPicture = [NSURL URLWithString:dictionary[@"profile_banner_url"]];
+        self.userBio = dictionary[@"description"];
+        self.followerCount = dictionary[@"followers_count"];
+        self.followingCount = dictionary[@"friends_count"];
         
     }
     return self;

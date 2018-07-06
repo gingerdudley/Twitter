@@ -13,6 +13,12 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *backdropImage;
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *userLabel;
+@property (weak, nonatomic) IBOutlet UILabel *screenNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *followerCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *followingCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *bioBodyLabel;
+
 
 
 @end
@@ -21,10 +27,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [self.profileImage setImageWithURL:self.user.profilePicture];
     [self.backdropImage setImageWithURL:self.user.bannerPicture];
-    //self.backdropImage setImageWithURL:self.user.
+    self.userLabel.text = self.user.name;
+    [self.userLabel sizeToFit];
+    NSString *atSign = @"@";
+    self.screenNameLabel.text = [atSign stringByAppendingString:self.user.screenName];
+    [self.screenNameLabel sizeToFit];
+    self.bioBodyLabel.text = self.user.userBio;
+    [self.bioBodyLabel sizeToFit];
+    
+    //NSLog(@"%d", self.user.followingCount);
+    self.followerCountLabel.text = [NSString stringWithFormat:@"%d", self.user.followerCount];
+    [self.followerCountLabel sizeToFit];
+    self.followingCountLabel.text = [NSString stringWithFormat:@"%d", self.user.followingCount];
+    [self.followingCountLabel sizeToFit];
     
     
 }
