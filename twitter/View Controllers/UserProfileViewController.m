@@ -7,8 +7,13 @@
 //
 
 #import "UserProfileViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface UserProfileViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *backdropImage;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+
 
 @end
 
@@ -17,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.profileImage setImageWithURL:self.user.profilePicture];
+    //self.backdropImage setImageWithURL:self.user.
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
