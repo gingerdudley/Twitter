@@ -485,6 +485,10 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0L1-6m-GCe">
+                                <rect key="frame" x="16" y="367" width="332" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -520,6 +524,7 @@
                         <outlet property="dateLabel" destination="jlk-S4-d8h" id="lio-Js-Ddv"/>
                         <outlet property="favoriteButton" destination="DL0-jW-2Pu" id="CQq-Y4-eG4"/>
                         <outlet property="favoriteNumberLabel" destination="FNg-gO-I5X" id="Hea-GS-4IV"/>
+                        <outlet property="mediaImage" destination="0L1-6m-GCe" id="5EW-pd-uWu"/>
                         <outlet property="nameLabel" destination="hEc-gl-BPp" id="olV-os-RAX"/>
                         <outlet property="profileImage" destination="K5B-8m-aDi" id="QTw-DP-vmH"/>
                         <outlet property="replyButton" destination="X19-ZK-FjZ" id="wxf-ga-BMl"/>

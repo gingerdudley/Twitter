@@ -25,6 +25,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *retweetButton;
 @property (weak, nonatomic) IBOutlet UIButton *favoriteButton;
 
+//adding outlet for entities image
+@property (weak, nonatomic) IBOutlet UIImageView *mediaImage;
+
+
 @end
 
 @implementation TweetDetailsViewController
@@ -53,6 +57,12 @@
     self.retweetNumberLabel.text = [[NSString stringWithFormat:@"%d", self.tweet.retweetCount] stringByAppendingString:@" retweets"];
     //[self.retweetNumberLabel sizeToFit];
     self.favoriteNumberLabel.text = [[NSString stringWithFormat:@"%d", self.tweet.favoriteCount] stringByAppendingString:@" favorites"];
+    
+    //adding image for entity option
+    if (self.tweet.mediaTweetImage) {
+        [self.mediaImage setImageWithURL:self.tweet.mediaTweetImage];
+    }
+    
     
 }
 

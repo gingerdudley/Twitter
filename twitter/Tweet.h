@@ -23,8 +23,10 @@
 
 @property (strong, nonatomic) User *retweetedByUser;
 
-//added for entity aspect
-//@property (strong, nonatomic) Entities *entities;
+//adding media array for the entities part
+@property (strong, nonatomic) NSArray *mediaArray;
+@property (strong, nonatomic) NSURL *mediaTweetImage;
+
 
 +(NSMutableArray *)tweetsWithArray:(NSArray *)dictionaries;
 

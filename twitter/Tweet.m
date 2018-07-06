@@ -48,21 +48,16 @@
         //changing the timestamp to display .... ago
         NSString *ago = [date timeAgo];
         self.createdAtString = ago;
-        
-        //output format
-        //formatter.dateStyle = NSDateFormatterShortStyle;
-        //formatter.timeStyle = NSDateIntervalFormatterNoStyle;
-        
-        //changing date to a string
-        //self.createdAtString = [formatter stringFromDate:date];
-        
+
         //adding an entity object
-       // NSDictionary *entities = dictionary[@"entities"];
-        //self.entities = [[Entities alloc] initWithDictionary:entities];
-        
-        
-        
+        NSDictionary *entities = dictionary[@"entities"];
+        if(entities[@"media"]){
+            self.mediaArray = entities[@"media"];
+            NSDictionary *mediaDictionary = self.mediaArray[0];
+            self.mediaTweetImage = [NSURL URLWithString:mediaDictionary[@"media_url_https"]];
+        }
     }
+    
     return self;
 }
 
