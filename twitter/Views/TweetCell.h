@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Tweet.h"
 
+@protocol TweetCellDelegate;
+
+
 @interface TweetCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
@@ -20,8 +23,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *favoriteCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *screenNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateStampLabel;
-
-
 @property (nonatomic, strong) Tweet *tweet;
 
+//optional property added
+@property (nonatomic, weak) id<TweetCellDelegate> delegate;
+
+@end
+
+@protocol TweetCellDelegate
+-(void)tweetCell:(TweetCell *) tweetCell didTap: (User *)user;
 @end

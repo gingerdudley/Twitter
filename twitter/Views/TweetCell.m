@@ -16,6 +16,11 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    UITapGestureRecognizer *profileTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(didTapUserProfile:)];
+    [self.profileImage addGestureRecognizer:profileTapGestureRecognizer];
+    [self.profileImage setUserInteractionEnabled:YES];
+    
+    //[self.delegate tweetCell:self didTap:self.tweet.user];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -141,5 +146,14 @@
     }
     
 }
+
+-(void) didTapUserProfile:(UITapGestureRecognizer *)sender{
+    //call the method on the delegate
+    [self.delegate tweetCell:self didTap:self.tweet.user];
+    
+    
+}
+
+
 
 @end

@@ -13,6 +13,8 @@
 #import "UIImageView+AFNetworking.h"
 #import "ComposeViewController.h"
 #import "TweetDetailsViewController.h"
+#import "User.h"
+#import "UserProfileViewController.h"
 
 @interface TimelineViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -69,6 +71,10 @@
     TweetCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TweetCell" forIndexPath:indexPath];
     
     cell.tweet = self.tweets[indexPath.row];
+    
+    //adding delegate property
+    cell.delegate = self;
+    
     return cell;
 }
 
@@ -96,6 +102,12 @@
     
 }
 
+//adding for profile segue stuff
+- (void)tweetCell:(TweetCell *)tweetCell didTap:(User *)user{
+    // TODO: Perform segue to profile view controller
+    [self performSegueWithIdentifier:@"profileSegue" sender:user];
+}
+
 
 
 
@@ -118,6 +130,13 @@
          
          TweetDetailsViewController *tweetDetailsViewController = [segue destinationViewController];
          tweetDetailsViewController.tweet = tweet;
+         
+     }
+     
+     else if([sender isKindOfClass:[User class]]){
+         UserProfileViewController *profileController = [segue destinationViewController];
+         profileController.user = sender;
+         
          
      }
      

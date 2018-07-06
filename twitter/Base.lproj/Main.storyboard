@@ -349,11 +349,12 @@
                     <connections>
                         <outlet property="composeTweetButton" destination="BaL-U7-S30" id="QQz-2b-4zy"/>
                         <outlet property="tableView" destination="ZMC-b5-hei" id="4F1-er-S3Z"/>
+                        <segue destination="bnx-5g-Ttn" kind="show" identifier="profileSegue" id="kLE-g1-5vg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oQh-hN-GQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016.8" y="35.532233883058474"/>
+            <point key="canvasLocation" x="2006" y="-19"/>
         </scene>
         <!--Tweet Details View Controller-->
         <scene sceneID="yny-hl-r7O">
@@ -527,6 +528,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gF-Rr-vCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2005.5999999999999" y="791.15442278860576"/>
+        </scene>
+        <!--User Profile View Controller-->
+        <scene sceneID="tGD-JY-GUF">
+            <objects>
+                <viewController id="bnx-5g-Ttn" customClass="UserProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DIT-E8-pwA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="G8f-0c-5jT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSd-ZJ-nQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2953" y="797"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="KRI-Oh-NcM">
