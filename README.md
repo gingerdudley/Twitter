@@ -4,11 +4,11 @@
 The starter project can be found in the `starter-project` tag. Download and run `pod install`.
 
 
-# Project 4 - *Name of App Here*
+# Project 4 - *Twitter
 
 **Name of your app** is a basic twitter app to read and compose tweets the [Twitter API](https://apps.twitter.com/).
 
-Time spent: **X** hours spent in total
+Time spent: 31 hours spent in total
 
 ## User Stories
 
@@ -67,7 +67,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I struggled with connecting all the separate APIs up with my app and also was challenged by incorporating the videos and images/ gifs
 
 ## Credits
 
